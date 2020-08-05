@@ -8,7 +8,7 @@ import java.io.IOException;
 public class E1bMainProgram {
 
     public static void main(String[] args) throws IOException {
-        System.out.println("E1b. Odd numbers between 10 to 101");
+        System.out.println("E1b. Pair numbers between 10 to 101");
 
     }
 }
