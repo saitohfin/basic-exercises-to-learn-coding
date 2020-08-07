@@ -33,6 +33,7 @@ public class E1dMainProgram {
             if(switchInput == "1"){
                 for (Integer index = number1; index <= number2; index++){
                     if (index % 2 != 0){
+                        Odd.isOdd(index);
                         System.out.println(index);
                     }
                 }

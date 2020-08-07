@@ -36,6 +36,7 @@ public class E1cMainProgram {
 
             for (Integer index=number3; index <= number4; index++){
                 if (index % 2 != 0){
+                    Odd.isOdd(index);
                     System.out.println(index);
                 }
             }
@@ -43,6 +44,7 @@ public class E1cMainProgram {
         } else {
             for (Integer index=number1; index <= number2; index++){
                 if (index % 2 != 0){
+                    Odd.isOdd(index);
                     System.out.println(index);
                 }
             }
