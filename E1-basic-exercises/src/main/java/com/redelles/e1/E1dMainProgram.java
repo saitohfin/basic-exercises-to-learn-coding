@@ -20,33 +20,29 @@ public class E1dMainProgram {
         System.out.println("For getting the odd numbers between both, introduce 1, for getting " +
                 "the pair numbers between both, introduce 2:");
         Scanner scan3 = new Scanner(System.in);
-        String m1 = scan3.next();
+        String switchInput = scan3.next();
 
-        Integer x1 = Integer.parseInt(n1);
-        Integer x2 = Integer.parseInt(n2);
-        Integer s1 = Integer.parseInt(m1);
+        Integer number1 = Integer.parseInt(n1);
+        Integer number2 = Integer.parseInt(n2);
+
 
         // Error control
-        if(x1 >= x2){
+        if(number1 >= number2){
             System.out.println("First number should be less than second, try again");
         } else {
-            if(s1 == 1){
-                for (Integer index=x1; index <= x2; index++){
+            if(switchInput == "1"){
+                for (Integer index = number1; index <= number2; index++){
                     if (index % 2 != 0){
                         System.out.println(index);
                     }
                 }
-            } else if(s1 == 2) {
-                for (Integer index=x1; index <= x2; index++){
+            } else if(switchInput == "2") {
+                for (Integer index = number1; index <= number2; index++){
                     if (index % 2 == 0){
                         System.out.println(index);
                     }
                 }
             }
-
-
-
         }
-
     }
 }

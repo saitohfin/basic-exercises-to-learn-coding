@@ -13,6 +13,7 @@ public class E1MainProgram {
 
         for (Integer index = 10; index <= 101; index++){
             if (index % 2 != 0){
+                Odd.isOdd(index);
                 System.out.println(index);
             }
         }
