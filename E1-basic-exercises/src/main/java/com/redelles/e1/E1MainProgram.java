@@ -9,14 +9,13 @@ import java.io.IOException;
 public class E1MainProgram {
 
     public static void main(String[] args) throws IOException {
+
         System.out.println("E1. Odd numbers between 10 to 101");
 
         for (Integer index = 10; index <= 101; index++){
-            if (index % 2 != 0){
-                Odd.isOdd(index);
+            if (Odd.isOdd(index)){
                 System.out.println(index);
             }
         }
     }
-
 }

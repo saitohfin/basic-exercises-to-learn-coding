@@ -8,10 +8,11 @@ import java.io.IOException;
 public class E1bMainProgram {
 
     public static void main(String[] args) throws IOException {
+
         System.out.println("E1b. Pair numbers between 10 to 101");
 
         for (Integer index = 10; index <= 101; index++){
-            if (index % 2 == 0){
+            if (Pair.isPair(index)){
                 System.out.println(index);
             }
         }
