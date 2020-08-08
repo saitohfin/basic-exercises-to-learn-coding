@@ -12,10 +12,7 @@ public class E1MainProgram {
 
         System.out.println("E1. Odd numbers between 10 to 101");
 
-        for (Integer index = 10; index <= 101; index++){
-            if (Odd.isOdd(index)){
-                System.out.println(index);
-            }
-        }
+        Utils.printOddNumbers(10, 101);
+
     }
 }

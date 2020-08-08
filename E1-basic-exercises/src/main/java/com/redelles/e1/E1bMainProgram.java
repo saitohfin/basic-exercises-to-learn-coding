@@ -11,10 +11,6 @@ public class E1bMainProgram {
 
         System.out.println("E1b. Pair numbers between 10 to 101");
 
-        for (Integer index = 10; index <= 101; index++){
-            if (Pair.isPair(index)){
-                System.out.println(index);
-            }
-        }
+        Utils.printPairNumbers(10, 101);
     }
 }
