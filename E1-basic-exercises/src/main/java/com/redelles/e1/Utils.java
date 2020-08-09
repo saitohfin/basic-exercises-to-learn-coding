@@ -25,9 +25,8 @@ public class Utils {
         Scanner scan = new Scanner(System.in);
 
         do {
-            System.out.println("Introduce a valid number");
             numberInput = scan.nextInt();
-        } while (numberInput instanceof Integer);
+        } while (!(numberInput instanceof Integer));
 
         return numberInput;
     }
