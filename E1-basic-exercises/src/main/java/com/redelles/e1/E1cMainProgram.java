@@ -17,9 +17,7 @@ public class E1cMainProgram {
         do {
             try {
                 System.out.println("First number should be less than second, try again");
-                System.out.println("Introduce the first number");
                 number1 = Utils.getNumber();
-                System.out.println("Introduce the second number");
                 number2 = Utils.getNumber();
             } catch (Exception e) {
                 System.out.println("Something went wrong, please try again.");

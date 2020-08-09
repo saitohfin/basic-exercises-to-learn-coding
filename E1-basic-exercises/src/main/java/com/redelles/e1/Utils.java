@@ -23,11 +23,11 @@ public class Utils {
     public static Integer getNumber(){
         Integer numberInput = 0;
         Scanner scan = new Scanner(System.in);
+        do {
+            System.out.println("Introduce a valid number");
+            numberInput = scan.nextInt();
+        } while (numberInput instanceof Integer);
 
-        numberInput = scan.nextInt();
-        if(numberInput){
-            return numberInput;
-        }
         return numberInput;
     }
 }
