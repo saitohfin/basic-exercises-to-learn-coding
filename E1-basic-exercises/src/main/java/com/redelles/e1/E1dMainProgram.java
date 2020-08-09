@@ -19,12 +19,11 @@ public class E1dMainProgram {
             try {
                 System.out.println("First number should be less than second, try again");
                 System.out.println("Introduce the first number");
-                number1 = scan.nextInt();
+                number1 = Utils.getNumber();
                 System.out.println("Introduce the second number");
-                number2 = scan.nextInt();
+                number2 =  Utils.getNumber();
             } catch (Exception e) {
                 System.out.println("Something went wrong, please try again.");
-                scan = new Scanner(System.in);
             }
         } while (number1 >= number2);
 

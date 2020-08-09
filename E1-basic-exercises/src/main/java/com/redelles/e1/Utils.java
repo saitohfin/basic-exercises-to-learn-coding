@@ -1,5 +1,7 @@
 package com.redelles.e1;
 
+import java.util.Scanner;
+
 public class Utils {
 
     public static void printOddNumbers(int number1, int number2){
@@ -16,5 +18,16 @@ public class Utils {
                 System.out.println(index);
             }
         }
+    }
+
+    public static Integer getNumber(){
+        Integer numberInput = 0;
+        Scanner scan = new Scanner(System.in);
+
+        numberInput = scan.nextInt();
+        if(numberInput){
+            return numberInput;
+        }
+        return numberInput;
     }
 }
