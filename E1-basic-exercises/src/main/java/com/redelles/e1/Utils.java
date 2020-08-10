@@ -24,9 +24,7 @@ public class Utils {
         Integer numberInput = 0;
         Scanner scan = new Scanner(System.in);
 
-        do {
-            numberInput = scan.nextInt();
-        } while (!(numberInput instanceof Integer));
+        numberInput = scan.nextInt();
 
         return numberInput;
     }
