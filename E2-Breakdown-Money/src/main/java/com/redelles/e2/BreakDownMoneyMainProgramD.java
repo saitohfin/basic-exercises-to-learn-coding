@@ -14,5 +14,12 @@ public class BreakDownMoneyMainProgramD {
          * x.add()
          * x.get(position)
          */
+
+        Integer amount = Utils.getAmount();
+        Integer[] quantities = new Integer[3];
+        quantities = Utils.getArrayOfThree();
+        Integer pendingAmount = Utils.breakdown(quantities[0], amount);
+        pendingAmount = Utils.breakdown(quantities[1], pendingAmount);
+        Utils.breakdown(quantities[2], pendingAmount);
     }
 }

@@ -8,5 +8,12 @@ import java.io.IOException;
 public class BreakDownMoneyMainProgramB {
 
     public static void main(String[] args) throws IOException {
+
+        Integer amount = Utils.getAmount();
+
+        Integer quantity = Utils.getQty();
+
+        Utils.breakdown(quantity, amount);
+
     }
 }

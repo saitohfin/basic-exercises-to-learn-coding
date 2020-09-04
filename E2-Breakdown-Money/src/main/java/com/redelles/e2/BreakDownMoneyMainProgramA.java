@@ -9,42 +9,17 @@ public class BreakDownMoneyMainProgramA {
 
     public static void main(String[] args) throws IOException {
 
-        Integer amount = -1;
+        Integer amount = Utils.getAmount();
 
-        do{
-            try {
-                System.out.println("Please enter an amount of money.");
-                amount = Utils.getNumber();
-            } catch (Exception e) {
-                System.out.println("REMEMBER This application only works with numbers.");
-            }
-        } while (!(amount instanceof Integer));
+        Integer pendingAmount = Utils.breakdown(500, amount);
 
-        Integer breakdown500;
-        Integer breakdown100;
-        Integer breakdown50;
-        Integer breakdown5;
+        pendingAmount = Utils.breakdown(100, pendingAmount);
 
-        breakdown500 = amount / 500;
-        System.out.println(breakdown500 + " -> 500");
-        amount -= 500*breakdown500;
+        pendingAmount = Utils.breakdown(50, pendingAmount);
 
-        //Utils.breakdown(500, amount);
-        //amount -= 100*breakdown100;
-        //System.out.println(amount);
+        pendingAmount = Utils.breakdown(5, pendingAmount);
 
-        breakdown100 = amount / 100;
-        System.out.println(breakdown100 + " -> 100");
-        amount -= 100*breakdown100;
+        Utils.breakdown(1, pendingAmount);
 
-        breakdown50 = amount / 50;
-        System.out.println(breakdown50 + " -> 50");
-        amount -= 50*breakdown50;
-
-        breakdown5 = amount / 5;
-        System.out.println(breakdown5 + " -> 5");
-        amount -= 5*breakdown5;
-
-        System.out.println(amount + " -> 1");
     }
 }

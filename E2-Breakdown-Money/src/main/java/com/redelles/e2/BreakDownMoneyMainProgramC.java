@@ -1,6 +1,8 @@
 package com.redelles.e2;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 /**
  * Input an amount of money. Input three quantities and do the breakdown with these quantities with the money input
@@ -14,5 +16,12 @@ public class BreakDownMoneyMainProgramC {
          * x.add()
          * x.get(position)
          */
+
+        Integer amount = Utils.getAmount();
+        Integer[] quantities = new Integer[3];
+        quantities = Utils.getArrayOfThree();
+        Integer pendingAmount = Utils.breakdown(quantities[0], amount);
+        pendingAmount = Utils.breakdown(quantities[1], pendingAmount);
+        Utils.breakdown(quantities[2], pendingAmount);
     }
 }
