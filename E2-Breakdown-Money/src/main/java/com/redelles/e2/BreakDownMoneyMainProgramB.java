@@ -9,11 +9,11 @@ public class BreakDownMoneyMainProgramB {
 
     public static void main(String[] args) throws IOException {
 
-        Integer amount = Utils.getAmount();
+        Integer amount = Numbers.getAmount();
 
-        Integer quantity = Utils.getQty();
+        Integer quantity = Numbers.getQty();
 
-        Utils.breakdown(quantity, amount);
+        Breakdown.breakdownWithQuantity(quantity, amount);
 
     }
 }

@@ -9,17 +9,17 @@ public class BreakDownMoneyMainProgramA {
 
     public static void main(String[] args) throws IOException {
 
-        Integer amount = Utils.getAmount();
+        Integer amount = Numbers.getAmount();
 
-        Integer pendingAmount = Utils.breakdown(500, amount);
+        Integer pendingAmount = Breakdown.breakdownWithQuantity(500, amount);
 
-        pendingAmount = Utils.breakdown(100, pendingAmount);
+        pendingAmount = Breakdown.breakdownWithQuantity(100, pendingAmount);
 
-        pendingAmount = Utils.breakdown(50, pendingAmount);
+        pendingAmount = Breakdown.breakdownWithQuantity(50, pendingAmount);
 
-        pendingAmount = Utils.breakdown(5, pendingAmount);
+        pendingAmount = Breakdown.breakdownWithQuantity(5, pendingAmount);
 
-        Utils.breakdown(1, pendingAmount);
+        Breakdown.breakdownWithQuantity(1, pendingAmount);
 
     }
 }
