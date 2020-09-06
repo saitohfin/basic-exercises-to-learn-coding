@@ -15,11 +15,17 @@ public class BreakDownMoneyMainProgramD {
          * x.get(position)
          */
 
-        Integer amount = Numbers.getAmount();
-        Integer[] quantities = new Integer[3];
-        quantities = Numbers.getArrayOfThree();
-        Integer pendingAmount = Breakdown.breakdownWithQuantity(quantities[0], amount);
-        pendingAmount = Breakdown.breakdownWithQuantity(quantities[1], pendingAmount);
-        Breakdown.breakdownWithQuantity(quantities[2], pendingAmount);
+        System.out.println("Please enter an amount of money.");
+        Integer amount = GetNumbers.getInteger();
+        Integer[] quantities = GetNumbers.getArrayOfThree();
+        Integer firstQuantity = GetBreakdown.breakdownWithQuantity(quantities[0], amount);
+        Integer pendingAmount = amount - quantities[0] * firstQuantity;
+        Integer secondQuantity = GetBreakdown.breakdownWithQuantity(quantities[1], pendingAmount);
+        pendingAmount = pendingAmount - quantities[1] * secondQuantity;
+        Integer thirdQuantity = GetBreakdown.breakdownWithQuantity(quantities[2], pendingAmount);
+
+        System.out.println(firstQuantity + " -> " + quantities[0]);
+        System.out.println(secondQuantity + " -> " + quantities[1]);
+        System.out.println(thirdQuantity + " -> " + quantities[2]);
     }
 }

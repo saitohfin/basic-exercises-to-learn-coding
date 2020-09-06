@@ -2,7 +2,7 @@ package com.redelles.e2;
 
 import java.util.Scanner;
 
-public class Numbers {
+public class GetNumbers {
 
     public static Integer scanNumber(){
 
@@ -22,41 +22,22 @@ public class Numbers {
         return numberInput;
     }
 
-    public static Integer getAmount(){
+    public static Integer getInteger(){
 
-        Integer amount = -1;
+        Integer number = -1;
 
         do{
             try {
-                System.out.println("Please enter an amount of money.");
-                amount = Numbers.scanNumber();
+
+                number = GetNumbers.scanNumber();
 
             } catch (Exception e) {
                 System.out.println("REMEMBER This application only works with numbers.");
             }
 
-        } while (amount == -1);
+        } while (number == -1);
 
-        return amount;
-    }
-
-    public static Integer getQty(){
-
-        Integer qty = -1;
-
-        do{
-            try {
-                System.out.println("Please enter a quantity.");
-                qty = Numbers.scanNumber();
-
-            } catch (Exception e) {
-                System.out.println("REMEMBER This application only works with numbers.");
-
-            }
-
-        } while (qty == -1);
-
-        return qty;
+        return number;
     }
 
     public static Integer[] getArrayOfThree(){
@@ -64,11 +45,11 @@ public class Numbers {
         Integer[] quantities = new Integer[3];
 
         System.out.println("Please introduce the first quantity to do the breakdown, press enter.");
-        quantities[0] = Numbers.scanNumber();
+        quantities[0] = GetNumbers.scanNumber();
         System.out.println("Please introduce the second quantity to do the breakdown, press enter.");
-        quantities[1] = Numbers.scanNumber();
+        quantities[1] = GetNumbers.scanNumber();
         System.out.println("Please introduce the third quantity to do the breakdown, press enter.");
-        quantities[2] = Numbers.scanNumber();
+        quantities[2] = GetNumbers.scanNumber();
 
         return quantities;
     }

@@ -9,17 +9,27 @@ public class BreakDownMoneyMainProgramA {
 
     public static void main(String[] args) throws IOException {
 
-        Integer amount = Numbers.getAmount();
+        System.out.println("Please enter an amount of money.");
+        Integer amount = GetNumbers.getInteger();
 
-        Integer pendingAmount = Breakdown.breakdownWithQuantity(500, amount);
+        Integer pendingAmount = GetBreakdown.breakdownWithQuantity(500, amount);
+        System.out.println(pendingAmount + " -> " + 500);
+        amount = amount - 500 * pendingAmount;
 
-        pendingAmount = Breakdown.breakdownWithQuantity(100, pendingAmount);
+        pendingAmount = GetBreakdown.breakdownWithQuantity(100, amount);
+        System.out.println(pendingAmount + " -> " + 100);
+        amount = amount - 100 * pendingAmount;
 
-        pendingAmount = Breakdown.breakdownWithQuantity(50, pendingAmount);
+        pendingAmount = GetBreakdown.breakdownWithQuantity(50, amount);
+        System.out.println(pendingAmount + " -> " + 50);
+        amount = amount - 50 * pendingAmount;
 
-        pendingAmount = Breakdown.breakdownWithQuantity(5, pendingAmount);
+        pendingAmount = GetBreakdown.breakdownWithQuantity(5, amount);
+        System.out.println(pendingAmount + " -> " + 5);
+        amount = amount - 5 * pendingAmount;
 
-        Breakdown.breakdownWithQuantity(1, pendingAmount);
+        pendingAmount = GetBreakdown.breakdownWithQuantity(1, amount);
+        System.out.println(pendingAmount + " -> " + 1);
 
     }
 }
