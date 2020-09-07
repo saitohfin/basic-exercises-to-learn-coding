@@ -15,7 +15,7 @@ public class BreakDownMoneyMainProgramD {
          * x.get(position)
          */
 
-        /*System.out.println("Please enter an amount of money.");
+        System.out.println("Please enter an amount of money.");
         Integer amount = GetNumbers.getInteger();
         Integer[] quantities = GetNumbers.getArrayOfThree();
         Integer firstQuantity = GetBreakdown.breakdownWithQuantity(quantities[0], amount);
@@ -26,27 +26,6 @@ public class BreakDownMoneyMainProgramD {
 
         System.out.println(firstQuantity + " -> " + quantities[0]);
         System.out.println(secondQuantity + " -> " + quantities[1]);
-        System.out.println(thirdQuantity + " -> " + quantities[2]);*/
-
-
-        //ArrayExercise Solved
-        Double[] arrayOfNumbers = GetNumbers.getRandomDoubleNumberFrom1To10();
-        System.out.println("Random array:");
-        for(Integer i = 0; i < arrayOfNumbers.length; i++){
-            System.out.print(arrayOfNumbers[i] + " ");
-        }
-
-        arrayOfNumbers = GetNumbers.GetSortedAscArray(arrayOfNumbers);
-
-        System.out.println("\n Array sorted in ascending order: ");
-        for(Integer i = 0; i < arrayOfNumbers.length; i++){
-            System.out.print(arrayOfNumbers[i] + " ");
-        }
-
-        Double max = GetNumbers.GetMaximumFromArray(arrayOfNumbers);
-        Double min = GetNumbers.GetMinimumFromArray(arrayOfNumbers);
-        System.out.println("\nMaximum number = "
-                + max + " Minimum number = " + min);
-
+        System.out.println(thirdQuantity + " -> " + quantities[2]);
     }
 }
